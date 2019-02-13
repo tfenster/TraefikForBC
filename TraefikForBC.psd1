@@ -69,7 +69,7 @@
     # NestedModules = @()
     
     # Aus diesem Modul zu exportierende Funktionen. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Funktionen vorhanden sind.
-    FunctionsToExport = @('Add-AccountToDockerAccess')
+    FunctionsToExport = @('Start-BCWithTraefikLabels', 'Initialize-TraefikForBC', 'Start-Traefik')
     
     # Aus diesem Modul zu exportierende Cmdlets. Um optimale Leistung zu erzielen, verwenden Sie keine Platzhalter und löschen den Eintrag nicht. Verwenden Sie ein leeres Array, wenn keine zu exportierenden Cmdlets vorhanden sind.
     CmdletsToExport = @()
