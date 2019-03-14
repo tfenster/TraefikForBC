@@ -48,9 +48,13 @@ function Start-BCWithTraefikLabels {
         [String]
         $image,
 
-        [parameter(Mandatory=$true,Position=1)]
+        [parameter(Mandatory=$true,Position=2)]
         [String]
         $externaldns,
+
+        [parameter(Mandatory=$true,Position=3)]
+        [String]
+        $hostname,
 
         [parameter(Mandatory=$false)]
         [Switch]
@@ -74,8 +78,7 @@ function Start-BCWithTraefikLabels {
     $devRule="PathPrefix:${devPart};ReplacePathRegex: ^${devPart}(.*) /NAV/`$1"
     $dlRule="PathPrefixStrip:${dlPart}"
 
-    $additionalParameters = @("--hostname $externaldns",
-                #"-v c:\traefikforbc\my:c:\run\my",
+    $additionalParameters = @("--hostname $hostname",
                 "-e webserverinstance=$name",
                 "-e publicdnsname=$externaldns", 
                 "-e $customNavSettings",
