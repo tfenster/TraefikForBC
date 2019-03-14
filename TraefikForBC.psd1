@@ -12,7 +12,7 @@
     RootModule = 'TraefikForBC.psm1'
     
     # Die Versionsnummer dieses Moduls
-    ModuleVersion = '0.0.1'
+    ModuleVersion = '0.0.2'
     
     # Unterstützte PSEditions
     # CompatiblePSEditions = @()
@@ -107,7 +107,8 @@
             # IconUri = ''
     
             # 'ReleaseNotes' des Moduls
-            ReleaseNotes = '0.0.1: Initial'
+            ReleaseNotes = '0.0.1: Initial
+  0.0.2: add hostname param to allow differentiation between hostname and external DNS'
     
         } # Ende der PSData-Hashtabelle
     
